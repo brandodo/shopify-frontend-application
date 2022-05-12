@@ -1,23 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Header } from "./components/Header";
+import { Form } from "./components/Form/Form";
+import { Sketches } from "./components/Sketches/Sketches";
+import axios from "axios";
+
+import "./App.scss";
 
 function App() {
+  const [sketches, setSketches] = useState([]);
+
+  const API_URL = process.env.REACT_APP_API_URL;
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
+  const headers = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${API_KEY}`,
+    },
+  };
+
+  const getSketches = (input, engine) => {
+    const prompt = `Write a thriller movie plot about ${input} in two sentences`;
+
+    axios
+      .post(
+        `${API_URL}/${engine}/completions`,
+        {
+          prompt: prompt,
+          max_tokens: 50,
+          temperature: 0.9,
+          top_p: 1,
+          n: 1,
+          stream: false,
+          logprobs: null,
+        },
+        headers
+      )
+      .then(({ data }) => {
+        data.prompt = prompt;
+        data.engine = engine;
+        setSketches([...sketches, data]);
+      })
+      .catch((err) => {
+        return err;
+      });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Form formHandle={getSketches} />
+      <Sketches data={sketches} />
     </div>
   );
 }

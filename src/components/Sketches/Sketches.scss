@@ -1,0 +1,38 @@
+.sketches {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px 0;
+
+    &-header {
+      margin: 0;
+    }
+
+    &-text {
+      margin: 0;
+      padding: 0 0 10px 0;
+
+      & > span {
+        font-weight: 600;
+      }
+    }
+
+    &-date {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}

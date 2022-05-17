@@ -19,7 +19,7 @@ function App() {
     },
   };
 
-  const getSketches = (input, engine) => {
+  const getSketches = (input, engine, avatar) => {
     const prompt = `Write a thriller movie plot about ${input} in two sentences`;
 
     axios
@@ -27,7 +27,7 @@ function App() {
         `${API_URL}/${engine}/completions`,
         {
           prompt: prompt,
-          max_tokens: 50,
+          max_tokens: 256,
           temperature: 0.9,
           top_p: 1,
           n: 1,
@@ -39,6 +39,7 @@ function App() {
       .then(({ data }) => {
         data.prompt = prompt;
         data.engine = engine;
+        data.avatar = avatar;
         setSketches([...sketches, data]);
       })
       .catch((err) => {

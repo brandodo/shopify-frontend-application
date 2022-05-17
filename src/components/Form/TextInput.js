@@ -9,6 +9,7 @@ export const TextInput = ({ setInput, label }) => {
         className="form__input"
         type="text"
         onChange={(event) => setInput(event.target.value)}
+        placeholder="e.g. Pizza"
       />
     </div>
   );

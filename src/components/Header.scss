@@ -1,0 +1,12 @@
+@use "../partials/fonts" as *;
+
+.header {
+  &__text {
+    font-family: "Darkmode";
+    font-size: 84px;
+    letter-spacing: 8px;
+    color: rgb(135, 0, 0);
+    height: fit-content;
+    margin-bottom: 0;
+  }
+}

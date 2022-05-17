@@ -1,20 +1,41 @@
-import Speech from "react-speech";
+import { useSpeechSynthesis } from "react-speech-kit";
 
-export const SpeechButton = ({ text }) => {
-  const styles = {
-    play: {
-      button: {
-        width: "28",
-        height: "28",
-        cursor: "pointer",
-        pointerEvents: "none",
-        outline: "none",
-        backgroundColor: "yellow",
-        border: "solid 1px rgba(255,255,255,1)",
-        borderRadius: 6,
-      },
-    },
-  };
+export const SpeechButton = ({ text, engine }) => {
+  const { speak, cancel, voices } = useSpeechSynthesis();
 
-  return <Speech text={text} style={styles.play} />;
+  let voice;
+
+  switch (engine) {
+    case "text-davinci-002":
+      voice = voices[0];
+      break;
+
+    case "text-curie-001":
+      voice = voices[2];
+      break;
+
+    case "text-babbage-001":
+      voice = voices[3];
+      break;
+
+    case "text-ada-001":
+      voice = voices[4];
+      break;
+
+    default:
+      break;
+  }
+
+  return (
+    <button
+      className="sketches__button"
+      onClick={() => {
+        console.log(voices);
+        cancel();
+        speak({ text: text, voice: voice });
+      }}
+    >
+      Read it to me!
+    </button>
+  );
 };

@@ -1,11 +1,9 @@
-import React from "react";
+import "./Header.scss";
 
 export const Header = () => {
-
-
   return (
     <header className="header">
-      <h1 className="header__text">THRILLERIZE!</h1>
+      <h1 className="header__text">TWO BITE THRILLERS!</h1>
     </header>
   );
 };

@@ -1,6 +1,24 @@
+@use "./partials/fonts";
+
+* {
+  font-family: "Malabo";
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+#root {
+  height: 100%;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-position: top;
+  height: 100%;
 }

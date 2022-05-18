@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Form } from "./components/Form/Form";
-import { Sketches } from "./components/Sketches/Sketches";
+import { Cards } from "./components/Cards/Cards";
 import axios from "axios";
 
 import "./App.scss";
@@ -51,7 +51,7 @@ function App() {
     <div className="App">
       <Header />
       <Form formHandle={getSketches} />
-      <Sketches data={sketches} />
+      <Cards data={sketches} />
     </div>
   );
 }

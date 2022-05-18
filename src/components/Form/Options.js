@@ -2,34 +2,31 @@ import davinci from "../../assets/images/davinci.png";
 import curie from "../../assets/images/curie.png";
 import babbage from "../../assets/images/babbage.png";
 import ada from "../../assets/images/ada.png";
+import { useEffect } from "react";
 
-export const Options = ({ engine, setEngine, setAvatar }) => {
-  let avatar;
+export const Options = ({ engine, setEngine, avatar, setAvatar }) => {
+  useEffect(() => {
+    switch (engine) {
+      case "text-davinci-002":
+        setAvatar(davinci);
+        break;
 
-  switch (engine) {
-    case "text-davinci-002":
-      avatar = davinci;
-      setAvatar(davinci);
-      break;
+      case "text-curie-001":
+        setAvatar(curie);
+        break;
 
-    case "text-curie-001":
-      avatar = curie;
-      setAvatar(curie);
-      break;
+      case "text-babbage-001":
+        setAvatar(babbage);
+        break;
 
-    case "text-babbage-001":
-      avatar = babbage;
-      setAvatar(babbage);
-      break;
+      case "text-ada-001":
+        setAvatar(ada);
+        break;
 
-    case "text-ada-001":
-      avatar = ada;
-      setAvatar(ada);
-      break;
-
-    default:
-      break;
-  }
+      default:
+        break;
+    }
+  }, [engine]);
 
   return (
     <div className="form__options">

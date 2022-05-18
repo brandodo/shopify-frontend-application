@@ -28,7 +28,7 @@ export const Sketch = ({ data }) => {
   }
 
   return (
-    <div id={id} className="sketches__card">
+    <div id={id} data-testid="card" className="sketches__card">
       <div className="sketches__card-container">
         <div>
           <h4 className="sketches__card-header">

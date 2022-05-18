@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sketches__card"
+  data-testid="card"
+  id="weeeee-123123"
+>
+  <div
+    className="sketches__card-container"
+  >
+    <div>
+      <h4
+        className="sketches__card-header"
+      >
+        Prompt: 
+        <span>
+          roooo
+        </span>
+      </h4>
+      <p
+        className="sketches__card-text"
+      >
+        <span>
+          Curator: 
+        </span>
+        Apparition Ada (text-ada-001)
+      </p>
+    </div>
+    <img
+      className="sketches__card-avatar"
+      src="../../assets/images/ada.png"
+    />
+  </div>
+  <button
+    className="sketches__button"
+    onClick={[Function]}
+  >
+    Read it to me!
+  </button>
+  <p
+    className="sketches__card-text"
+  />
+  <div
+    className="sketches__card-date"
+  >
+    <p
+      className="sketches__card-text"
+    >
+      Created on: 
+    </p>
+    <time
+      className="sketches__card-text"
+      dateTime={"+018908-09-22T09:35:45.000Z"}
+    >
+      Sep 22, 18908 05:35:45
+    </time>
+  </div>
+</div>
+`;

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> matches snapshot 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <div
+    className="form__container"
+  >
+    <label
+      className="form__label"
+      htmlFor="text-input"
+    >
+      Write a thriller about
+    </label>
+    <input
+      className="form__input"
+      name="text-input"
+      onChange={[Function]}
+      placeholder="e.g. Pizza"
+      type="text"
+    />
+  </div>
+  <div
+    className="form__options"
+  >
+    <div
+      className="form__container"
+    >
+      <label
+        className="form__label"
+        htmlFor="engine"
+      >
+        Choose your curator
+      </label>
+      <select
+        className="form__select"
+        name="engine"
+        onChange={[Function]}
+        value="text-curie-001"
+      >
+        <option
+          className="form__option"
+          value="text-davinci-002"
+        >
+          DaVinci
+        </option>
+        <option
+          className="form__option"
+          value="text-curie-001"
+        >
+          Madam Curie
+        </option>
+        <option
+          className="form__option"
+          value="text-babbage-001"
+        >
+          Count Babbage
+        </option>
+        <option
+          className="form__option"
+          value="text-ada-001"
+        >
+          Apparition Ada
+        </option>
+      </select>
+    </div>
+    <img
+      alt="curator-avatar"
+      className="form__avatar"
+      src="curie.png"
+    />
+  </div>
+  <input
+    className="form__submit form__submit--disabled"
+    disabled={true}
+    name="submit-button"
+    type="submit"
+  />
+</form>
+`;

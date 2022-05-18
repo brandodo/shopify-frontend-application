@@ -59,10 +59,16 @@
     font-size: 32px;
     transition: all 0.25s ease;
 
-    &:hover {
-      cursor: pointer;
-      background-color: black;
-      border: 2px solid#fff;
+    &--hover {
+      &:hover {
+        cursor: pointer;
+        background-color: black;
+        border: 2px solid#fff;
+      }
+    }
+
+    &--disabled {
+      background-color: grey;
     }
   }
 }

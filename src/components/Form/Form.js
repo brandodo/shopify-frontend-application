@@ -8,6 +8,8 @@ export const Form = ({ formHandle }) => {
   const [engine, setEngine] = useState("text-curie-001");
   const [avatar, setAvatar] = useState("");
 
+  const disableButton = input ? false : true;
+
   return (
     <form
       className="form"
@@ -17,8 +19,22 @@ export const Form = ({ formHandle }) => {
       }}
     >
       <TextInput setInput={setInput} label="Write a thriller about" />
-      <Options engine={engine} setEngine={setEngine} setAvatar={setAvatar} />
-      <input className="form__submit" type="submit" />
+      <Options
+        engine={engine}
+        setEngine={setEngine}
+        setAvatar={setAvatar}
+        avatar={avatar}
+      />
+      <input
+        className={
+          disableButton
+            ? "form__submit form__submit--disabled"
+            : "form__submit form__submit--hover"
+        }
+        name="submit-button"
+        type="submit"
+        disabled={disableButton}
+      />
     </form>
   );
 };

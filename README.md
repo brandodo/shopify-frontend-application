@@ -20,4 +20,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Cloning Repo  
 
-A .sample.env file is included if you wish to clone the repo. You will need to provide your own API key from you OpenAI account.
+A .sample.env file is included if you wish to clone the repo. You will need to provide your own API key from your OpenAI account.

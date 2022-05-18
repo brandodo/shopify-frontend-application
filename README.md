@@ -4,6 +4,8 @@ Two Bite Thrillers attempts to provide you with a thriller movie plot about a to
 
 This application is currently deployed to Heroku, which you can find [here](two-bite-thrillers.herokuapp.com/).  
 
+If viewing the [Replit deploy](https://replit.com/@BrandonO1/shopify-frontend-application#), you will need to create your own .env file with the appropriate variables. See ".sample.env" for an example.  
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
